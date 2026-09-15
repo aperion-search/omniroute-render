@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: omniroute
+    runtime: docker
+    plan: free
+
+    healthCheckPath: /api/monitoring/health
+
+    envVars:
+      - key: PORT
+        value: "20128"
+
+      - key: HOSTNAME
+        value: "0.0.0.0"
+
+      - key: DATA_DIR
+        value: "/app/data"
+
+      - key: HF_BUCKET
+        value: "hf://buckets/hfdevhere/omniroute"
+
+      - key: HF_BACKUP_INTERVAL
+        value: "300"
+
+      - key: HF_TOKEN
+        sync: false
+
+      - key: INITIAL_PASSWORD
+        sync: false
+
+      - key: JWT_SECRET
+        generateValue: true
