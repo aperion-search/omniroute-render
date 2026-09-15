@@ -1,3 +1,4 @@
+import "server-only";
 import { getCodexRequestDefaults } from "@/lib/providers/requestDefaults";
 import {
   getCodexModelScope,
