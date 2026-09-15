@@ -75,7 +75,7 @@ RUN --mount=type=cache,id=s/92ca8a61-c1ba-421f-a389-d48ac7258c2d-npm-cache,targe
   && node -e "const wreq=require('wreq-js'); if(typeof wreq.createTransport!=='function') process.exit(1)"
 
 
-ARG OMNIROUTE_USE_TURBOPACK=1
+ARG OMNIROUTE_USE_TURBOPACK=0
 ENV OMNIROUTE_USE_TURBOPACK="${OMNIROUTE_USE_TURBOPACK}"
 
 ARG OMNIROUTE_BASE_PATH=""
